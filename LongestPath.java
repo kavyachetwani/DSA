@@ -39,25 +39,25 @@ public class LongestPath {
         //to explore top cell
         if(isSafe(matrix, visited, i - 1, j))
         {
-            findLongestPath(matrix, visited, i - 1, j, x, y,maxdist, dist + 1);
+            maxidist = findLongestPath(matrix, visited, i - 1, j, x, y,maxdist, dist + 1);
         }
 
         //to explore bottom cell
         if(isSafe(matrix, visited, i + 1, j))
         {
-            findLongestPath(matrix, visited, i + 1, j, x, y, maxdist, dist+1);
+            maxdist = findLongestPath(matrix, visited, i + 1, j, x, y, maxdist, dist+1);
         }
 
         //to explore right cell
         if(isSafe(matrix, visited, i, j + 1))
         {
-            findLongestPath(matrix, visited, i , j+1, x, y, maxdist, dist + 1);
+            maxdist = findLongestPath(matrix, visited, i , j+1, x, y, maxdist, dist + 1);
         }
 
         //to explore left cell
         if(isSafe(matrix,visited, i, j -1))
         {
-            findLongestPath(matrix, visited, i, j - 1, x, y, maxdist, dist + 1);
+            maxdist = findLongestPath(matrix, visited, i, j - 1, x, y, maxdist, dist + 1);
         }
 
         //backtracking: we remove i, j from the visited path
